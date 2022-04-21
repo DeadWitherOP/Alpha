@@ -12,7 +12,7 @@ def getInfo(syntax,line):
   if code[0] == "display":
     if code[1] == "var":
       if code[2] in varNames:
-        return f"print ('{varValues[varNames.index(code[2])]}')"
+        return f"print('{varValues[varNames.index(code[2])]}')"
       else:
         Raise(f'ValueError: Line {line}: {code[2]} not found')
     elif code[1] == str:
