@@ -45,4 +45,7 @@ def getInfo(syntax,line):
       varValue[varNames.index(varName)] = value
     else:
       Raise(f"NameError: Line {line}: {code[1]} not defined")
-  elif code[0] == "":
+  elif code[0] == "python-->":
+    code.pop(0)
+    return f"exec('{" ".join(code)}')"
+  elif code[0] == "@import":
