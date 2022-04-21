@@ -45,3 +45,4 @@ def getInfo(syntax,line):
       varValue[varNames.index(varName)] = value
     else:
       Raise(f"NameError: Line {line}: {code[1]} not defined")
+  elif code[0] == "":
